@@ -1,0 +1,1500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stats View Controller-->
+        <scene sceneID="aaA-GV-ND5">
+            <objects>
+                <viewController id="bGl-Ky-2rl" customClass="StatsViewController" customModule="WordGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kcx-6a-szs">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDu-xH-dzC">
+                                <rect key="frame" x="173" y="670" width="45" height="39"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                <state key="normal" title="Exit">
+                                    <color key="titleColor" red="0.64313725489999995" green="0.054901960780000002" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bdr-vr-sbz" kind="unwind" unwindAction="unwindToHomeScreen:" id="02l-Yn-7GR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KC4-uS-KeR">
+                                <rect key="frame" x="63" y="45" width="265" height="54"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Game Stats">
+                                        <attributes>
+                                            <color key="NSColor" red="0.64313725489999995" green="0.054901960780000002" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="48" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82D-33-7ez">
+                                <rect key="frame" x="36" y="144" width="115" height="27"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Jumblers:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="24" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUI-Fc-HcB">
+                                <rect key="frame" x="50" y="179" width="152" height="19"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Total games played:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kk-pE-It8">
+                                <rect key="frame" x="50" y="206" width="140" height="19"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Words Unjumbled:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSX-Xx-Cq2">
+                                <rect key="frame" x="50" y="233" width="135" height="19"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Jumbles forfeited:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjb-ql-dRM">
+                                <rect key="frame" x="50" y="260" width="177" height="19"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Jumble button pressed:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bT3-DS-6hS">
+                                <rect key="frame" x="36" y="309" width="118" height="27"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Hangmen:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="24" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msy-ci-Bh0">
+                                <rect key="frame" x="50" y="344" width="152" height="19"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Total games played:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Tn-a2-Dhu">
+                                <rect key="frame" x="50" y="371" width="191" height="19"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Men saved (games won):">
+                                        <attributes>
+                                            <color key="NSColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LM-ak-Wn7">
+                                <rect key="frame" x="50" y="398" width="179" height="19"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Men hung (games lost):">
+                                        <attributes>
+                                            <color key="NSColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4A-jx-lcH">
+                                <rect key="frame" x="50" y="425" width="126" height="19"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Games forfeited:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Be-w5-OGB">
+                                <rect key="frame" x="50" y="452" width="126" height="19"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Letters guessed:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEg-q4-Vxi">
+                                <rect key="frame" x="341" y="179" width="10" height="19"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="0">
+                                        <attributes>
+                                            <color key="NSColor" red="0.64313725489999995" green="0.054901960780000002" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3H-4X-U1r">
+                                <rect key="frame" x="341" y="206" width="10" height="19"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="0">
+                                        <attributes>
+                                            <color key="NSColor" red="0.64313725489999995" green="0.054901960780000002" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cme-Dc-iQJ">
+                                <rect key="frame" x="341" y="233" width="10" height="19"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="0">
+                                        <attributes>
+                                            <color key="NSColor" red="0.64313725489999995" green="0.054901960780000002" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Lx-LQ-oGG">
+                                <rect key="frame" x="341" y="260" width="10" height="19"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="0">
+                                        <attributes>
+                                            <color key="NSColor" red="0.64313725489999995" green="0.054901960780000002" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="un1-ib-kma">
+                                <rect key="frame" x="341" y="344" width="10" height="19"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="0">
+                                        <attributes>
+                                            <color key="NSColor" red="0.64313725489999995" green="0.054901960780000002" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Um0-WL-Pit">
+                                <rect key="frame" x="341" y="371" width="10" height="19"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="0">
+                                        <attributes>
+                                            <color key="NSColor" red="0.64313725489999995" green="0.054901960780000002" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bs7-rJ-qCq">
+                                <rect key="frame" x="341" y="398" width="10" height="19"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="0">
+                                        <attributes>
+                                            <color key="NSColor" red="0.64313725489999995" green="0.054901960780000002" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3J-vt-QxO">
+                                <rect key="frame" x="341" y="425" width="10" height="19"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="0">
+                                        <attributes>
+                                            <color key="NSColor" red="0.64313725489999995" green="0.054901960780000002" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYu-iM-Zwy">
+                                <rect key="frame" x="341" y="452" width="10" height="19"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="0">
+                                        <attributes>
+                                            <color key="NSColor" red="0.64313725489999995" green="0.054901960780000002" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rkk-ny-4Xr">
+                                <rect key="frame" x="36" y="499" width="225" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Secret Lizard Stats:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="24" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3O-Nk-eQk">
+                                <rect key="frame" x="50" y="534" width="96" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Lizard spins:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPI-dA-1Nm">
+                                <rect key="frame" x="341" y="534" width="10" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="0">
+                                        <attributes>
+                                            <color key="NSColor" red="0.64313725489999995" green="0.054901960780000002" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ine-rZ-iQA"/>
+                        <color key="backgroundColor" red="0.42352941176470588" green="0.60392156862745094" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bT3-DS-6hS" firstAttribute="top" secondItem="Kjb-ql-dRM" secondAttribute="bottom" constant="30" id="00T-d6-y20"/>
+                            <constraint firstItem="8Lx-LQ-oGG" firstAttribute="trailing" secondItem="MEg-q4-Vxi" secondAttribute="trailing" id="09c-Rd-jZE"/>
+                            <constraint firstItem="MEg-q4-Vxi" firstAttribute="centerY" secondItem="mUI-Fc-HcB" secondAttribute="centerY" id="0ib-ll-2to"/>
+                            <constraint firstItem="2Tn-a2-Dhu" firstAttribute="leading" secondItem="mUI-Fc-HcB" secondAttribute="leading" id="1Qd-v5-dgO"/>
+                            <constraint firstItem="8Be-w5-OGB" firstAttribute="top" secondItem="q4A-jx-lcH" secondAttribute="bottom" constant="8" symbolic="YES" id="1t9-2i-Nzh"/>
+                            <constraint firstItem="msy-ci-Bh0" firstAttribute="top" secondItem="bT3-DS-6hS" secondAttribute="bottom" constant="8" symbolic="YES" id="2lo-C8-ygE"/>
+                            <constraint firstItem="8Lx-LQ-oGG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Kjb-ql-dRM" secondAttribute="trailing" constant="8" symbolic="YES" id="32C-bD-rvN"/>
+                            <constraint firstItem="82D-33-7ez" firstAttribute="top" secondItem="KC4-uS-KeR" secondAttribute="bottom" constant="45" id="7Ob-gH-UF8"/>
+                            <constraint firstItem="ine-rZ-iQA" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="82D-33-7ez" secondAttribute="trailing" symbolic="YES" id="7Y3-um-w3b"/>
+                            <constraint firstItem="Kjb-ql-dRM" firstAttribute="leading" secondItem="mUI-Fc-HcB" secondAttribute="leading" id="AGE-14-QSL"/>
+                            <constraint firstItem="cme-Dc-iQJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rSX-Xx-Cq2" secondAttribute="trailing" constant="8" symbolic="YES" id="CA4-8e-EPA"/>
+                            <constraint firstItem="rSX-Xx-Cq2" firstAttribute="top" secondItem="0kk-pE-It8" secondAttribute="bottom" constant="8" symbolic="YES" id="CAg-Dv-HxV"/>
+                            <constraint firstItem="bs7-rJ-qCq" firstAttribute="centerY" secondItem="9LM-ak-Wn7" secondAttribute="centerY" id="CXO-Ht-6CG"/>
+                            <constraint firstItem="Um0-WL-Pit" firstAttribute="centerY" secondItem="2Tn-a2-Dhu" secondAttribute="centerY" id="DM3-L5-Nq1"/>
+                            <constraint firstItem="RDu-xH-dzC" firstAttribute="leading" secondItem="ine-rZ-iQA" secondAttribute="leading" constant="173" id="F2l-PE-4MO"/>
+                            <constraint firstItem="ine-rZ-iQA" firstAttribute="trailing" secondItem="MEg-q4-Vxi" secondAttribute="trailing" constant="39" id="FYg-Vu-osd"/>
+                            <constraint firstItem="J3H-4X-U1r" firstAttribute="centerY" secondItem="0kk-pE-It8" secondAttribute="centerY" id="IVJ-hq-04R"/>
+                            <constraint firstItem="KC4-uS-KeR" firstAttribute="top" secondItem="ine-rZ-iQA" secondAttribute="top" constant="45" id="IVS-tW-hds"/>
+                            <constraint firstItem="yYu-iM-Zwy" firstAttribute="centerY" secondItem="8Be-w5-OGB" secondAttribute="centerY" id="IwS-yI-Ya5"/>
+                            <constraint firstItem="8Lx-LQ-oGG" firstAttribute="centerY" secondItem="Kjb-ql-dRM" secondAttribute="centerY" id="KaA-ya-6rc"/>
+                            <constraint firstItem="0kk-pE-It8" firstAttribute="leading" secondItem="mUI-Fc-HcB" secondAttribute="leading" id="KsX-Th-GiO"/>
+                            <constraint firstItem="J3H-4X-U1r" firstAttribute="trailing" secondItem="MEg-q4-Vxi" secondAttribute="trailing" id="Ldb-JJ-ba6"/>
+                            <constraint firstItem="ine-rZ-iQA" firstAttribute="trailing" secondItem="KC4-uS-KeR" secondAttribute="trailing" constant="62" id="Ldu-ok-2ku"/>
+                            <constraint firstItem="rSX-Xx-Cq2" firstAttribute="leading" secondItem="mUI-Fc-HcB" secondAttribute="leading" id="N1o-rJ-TcD"/>
+                            <constraint firstItem="ine-rZ-iQA" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bT3-DS-6hS" secondAttribute="trailing" symbolic="YES" id="O0r-6g-qmg"/>
+                            <constraint firstItem="Um0-WL-Pit" firstAttribute="trailing" secondItem="MEg-q4-Vxi" secondAttribute="trailing" id="QGT-lu-7T7"/>
+                            <constraint firstItem="Um0-WL-Pit" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2Tn-a2-Dhu" secondAttribute="trailing" constant="8" symbolic="YES" id="RJO-rI-2vz"/>
+                            <constraint firstItem="82D-33-7ez" firstAttribute="leading" secondItem="ine-rZ-iQA" secondAttribute="leading" constant="36" id="SKY-IT-idC"/>
+                            <constraint firstItem="RDu-xH-dzC" firstAttribute="top" secondItem="9LM-ak-Wn7" secondAttribute="bottom" constant="253" id="UHI-wH-Tgy"/>
+                            <constraint firstItem="bT3-DS-6hS" firstAttribute="leading" secondItem="82D-33-7ez" secondAttribute="leading" id="W5Y-GO-gaZ"/>
+                            <constraint firstItem="mUI-Fc-HcB" firstAttribute="top" secondItem="82D-33-7ez" secondAttribute="bottom" constant="8" symbolic="YES" id="X7R-7F-axJ"/>
+                            <constraint firstItem="q4A-jx-lcH" firstAttribute="leading" secondItem="mUI-Fc-HcB" secondAttribute="leading" id="XA9-wF-eTS"/>
+                            <constraint firstItem="un1-ib-kma" firstAttribute="centerY" secondItem="msy-ci-Bh0" secondAttribute="centerY" id="aDf-o9-lVd"/>
+                            <constraint firstItem="9LM-ak-Wn7" firstAttribute="leading" secondItem="mUI-Fc-HcB" secondAttribute="leading" id="atb-MX-miC"/>
+                            <constraint firstItem="ine-rZ-iQA" firstAttribute="bottom" secondItem="RDu-xH-dzC" secondAttribute="bottom" constant="47" id="b8Y-M6-QFr"/>
+                            <constraint firstItem="q4A-jx-lcH" firstAttribute="top" secondItem="9LM-ak-Wn7" secondAttribute="bottom" constant="8" symbolic="YES" id="cW7-p9-eej"/>
+                            <constraint firstItem="cme-Dc-iQJ" firstAttribute="centerY" secondItem="rSX-Xx-Cq2" secondAttribute="centerY" id="cqj-77-0tq"/>
+                            <constraint firstItem="msy-ci-Bh0" firstAttribute="leading" secondItem="mUI-Fc-HcB" secondAttribute="leading" id="dsz-bQ-PS4"/>
+                            <constraint firstItem="8Be-w5-OGB" firstAttribute="leading" secondItem="mUI-Fc-HcB" secondAttribute="leading" id="eHU-Qh-GQz"/>
+                            <constraint firstItem="z3J-vt-QxO" firstAttribute="centerY" secondItem="q4A-jx-lcH" secondAttribute="centerY" id="eVM-1h-c2F"/>
+                            <constraint firstItem="bs7-rJ-qCq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9LM-ak-Wn7" secondAttribute="trailing" constant="8" symbolic="YES" id="gBA-I8-0Zj"/>
+                            <constraint firstItem="mUI-Fc-HcB" firstAttribute="leading" secondItem="ine-rZ-iQA" secondAttribute="leading" constant="50" id="grg-j9-uAg"/>
+                            <constraint firstItem="9LM-ak-Wn7" firstAttribute="top" secondItem="2Tn-a2-Dhu" secondAttribute="bottom" constant="8" symbolic="YES" id="hEb-b8-bdl"/>
+                            <constraint firstItem="z3J-vt-QxO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="q4A-jx-lcH" secondAttribute="trailing" constant="8" symbolic="YES" id="k5z-Qi-7ea"/>
+                            <constraint firstItem="cme-Dc-iQJ" firstAttribute="trailing" secondItem="MEg-q4-Vxi" secondAttribute="trailing" id="lyY-JI-B6Y"/>
+                            <constraint firstItem="ine-rZ-iQA" firstAttribute="trailing" secondItem="RDu-xH-dzC" secondAttribute="trailing" constant="172" id="p43-ie-Y8n"/>
+                            <constraint firstItem="un1-ib-kma" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="msy-ci-Bh0" secondAttribute="trailing" constant="8" symbolic="YES" id="rsj-qW-6oA"/>
+                            <constraint firstItem="yYu-iM-Zwy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8Be-w5-OGB" secondAttribute="trailing" constant="8" symbolic="YES" id="sZJ-DW-Slr"/>
+                            <constraint firstItem="yYu-iM-Zwy" firstAttribute="trailing" secondItem="MEg-q4-Vxi" secondAttribute="trailing" id="st7-H1-Bjc"/>
+                            <constraint firstItem="z3J-vt-QxO" firstAttribute="trailing" secondItem="MEg-q4-Vxi" secondAttribute="trailing" id="uqq-Qv-gNp"/>
+                            <constraint firstItem="MEg-q4-Vxi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mUI-Fc-HcB" secondAttribute="trailing" constant="8" symbolic="YES" id="v6S-sH-eB5"/>
+                            <constraint firstItem="0kk-pE-It8" firstAttribute="top" secondItem="mUI-Fc-HcB" secondAttribute="bottom" constant="8" symbolic="YES" id="vRl-Rt-pQs"/>
+                            <constraint firstItem="J3H-4X-U1r" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0kk-pE-It8" secondAttribute="trailing" constant="8" symbolic="YES" id="vYH-00-l21"/>
+                            <constraint firstItem="bs7-rJ-qCq" firstAttribute="trailing" secondItem="MEg-q4-Vxi" secondAttribute="trailing" id="w7W-PW-r0X"/>
+                            <constraint firstItem="Kjb-ql-dRM" firstAttribute="top" secondItem="rSX-Xx-Cq2" secondAttribute="bottom" constant="8" symbolic="YES" id="xW4-XX-6Vh"/>
+                            <constraint firstItem="2Tn-a2-Dhu" firstAttribute="top" secondItem="msy-ci-Bh0" secondAttribute="bottom" constant="8" symbolic="YES" id="xcK-In-S5n"/>
+                            <constraint firstItem="KC4-uS-KeR" firstAttribute="leading" secondItem="ine-rZ-iQA" secondAttribute="leading" constant="63" id="yAF-Jo-zcS"/>
+                            <constraint firstItem="un1-ib-kma" firstAttribute="trailing" secondItem="MEg-q4-Vxi" secondAttribute="trailing" id="zIi-Io-5T5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0XK-dE-B1W"/>
+                    <connections>
+                        <outlet property="h_forfeitedLabel" destination="z3J-vt-QxO" id="Xua-88-y6R"/>
+                        <outlet property="h_gamesPlayedLabel" destination="un1-ib-kma" id="2yv-RS-eLS"/>
+                        <outlet property="h_lettersGuessedLabel" destination="yYu-iM-Zwy" id="0Op-9U-Qh6"/>
+                        <outlet property="h_menHungLabel" destination="bs7-rJ-qCq" id="4zO-qk-DfE"/>
+                        <outlet property="h_menSavedLabel" destination="Um0-WL-Pit" id="wZl-tC-waB"/>
+                        <outlet property="j_forfeitedLabel" destination="cme-Dc-iQJ" id="ctr-p2-Ki1"/>
+                        <outlet property="j_gamesPlayedLabel" destination="MEg-q4-Vxi" id="POp-eo-RCg"/>
+                        <outlet property="j_jumblePressedLabel" destination="8Lx-LQ-oGG" id="ex5-eG-9qZ"/>
+                        <outlet property="j_wordsUnjumbledLabel" destination="J3H-4X-U1r" id="Yi6-Ne-XNg"/>
+                        <outlet property="lizardTitleLabel" destination="Rkk-ny-4Xr" id="4lX-al-1vL"/>
+                        <outlet property="numSpinsLabel" destination="jPI-dA-1Nm" id="1k9-1S-QVf"/>
+                        <outlet property="spinsLabel" destination="h3O-Nk-eQk" id="W0Q-jv-Enx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Jh-XQ-B3c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="bdr-vr-sbz" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1026" y="819"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WordGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lizard" translatesAutoresizingMaskIntoConstraints="NO" id="HlL-lq-KAx" customClass="TouchView" customModule="WordGames" customModuleProvider="target">
+                                <rect key="frame" x="16" y="147" width="358" height="358"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="358" id="fMy-5K-1hw"/>
+                                    <constraint firstAttribute="height" constant="358" id="x1u-E9-shC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byn-l7-iDj">
+                                <rect key="frame" x="30" y="85" width="331" height="33.666666666666657"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="WORD LIZARD">
+                                        <attributes>
+                                            <color key="NSColor" red="0.86214143037796021" green="0.3104398250579834" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="30" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAy-W0-uhQ">
+                                <rect key="frame" x="16" y="741.33333333333337" width="274.33333333333331" height="19"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="A Project by Beth Jeanne Silverstein">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.56327712535858154" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70x-eB-zik">
+                                <rect key="frame" x="16" y="770.33333333333337" width="266.66666666666669" height="20.333333333333371"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Lizard designed by Haley Weigman">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.56327712535858154" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Ivl-JF-jkz">
+                                <rect key="frame" x="17" y="562" width="357" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pe1-iZ-vyK">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.56327712535858154" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                        <state key="normal" title="Jumble">
+                                            <color key="titleColor" red="0.12903481721878052" green="0.32425516843795776" blue="0.40834364295005798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="QQ8-zu-UTi" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="mmq-9X-tSC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSq-RU-8CB">
+                                        <rect key="frame" x="80.666666666666671" y="0.0" width="88.000000000000014" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.56327712535858154" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                        <state key="normal" title="Hangman">
+                                            <color key="titleColor" red="0.30196078430000001" green="0.56470588239999997" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="MDR-if-Tfd" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="OZb-34-mPc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sr-Dp-TTM">
+                                        <rect key="frame" x="179.33333333333334" y="0.0" width="115.00000000000003" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.56327712535858154" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                        <state key="normal" title="Word Search">
+                                            <color key="titleColor" red="0.47058823529999999" green="0.0039215686269999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="D1e-TJ-Ffc" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="YSP-n3-5Ch"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmo-b0-3bS">
+                                        <rect key="frame" x="305" y="0.0" width="52" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.56327712535858154" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                        <state key="normal" title="Stats">
+                                            <color key="titleColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="highlighted" title="Stats"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="bGl-Ky-2rl" kind="show" id="2Wv-iw-SN0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="73k-hT-qQJ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="0.78270190954208374" blue="0.37360560894012451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ivl-JF-jkz" firstAttribute="top" secondItem="HlL-lq-KAx" secondAttribute="bottom" constant="57" id="0Ve-KF-zi1"/>
+                            <constraint firstItem="EAy-W0-uhQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2tK-9j-38m"/>
+                            <constraint firstItem="70x-eB-zik" firstAttribute="top" secondItem="EAy-W0-uhQ" secondAttribute="bottom" constant="10" id="3CQ-Iz-wso"/>
+                            <constraint firstItem="byn-l7-iDj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="585-R8-nO9"/>
+                            <constraint firstItem="HlL-lq-KAx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="147" id="7tX-TD-3uB"/>
+                            <constraint firstItem="70x-eB-zik" firstAttribute="leading" secondItem="EAy-W0-uhQ" secondAttribute="leading" id="8SB-3F-5p6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EAy-W0-uhQ" secondAttribute="trailing" symbolic="YES" id="AIb-Oz-7gf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="70x-eB-zik" secondAttribute="trailing" symbolic="YES" id="C6I-OU-nyA"/>
+                            <constraint firstItem="Ivl-JF-jkz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="KPe-4p-8EN"/>
+                            <constraint firstItem="HlL-lq-KAx" firstAttribute="leading" secondItem="EAy-W0-uhQ" secondAttribute="leading" id="ROV-Ez-28t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ivl-JF-jkz" secondAttribute="trailing" constant="16" id="Xwz-OX-nLd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="byn-l7-iDj" secondAttribute="trailing" constant="29" id="Xxg-C5-HMH"/>
+                            <constraint firstItem="HlL-lq-KAx" firstAttribute="top" secondItem="byn-l7-iDj" secondAttribute="bottom" constant="28.329999999999998" id="YrE-x7-Pzg"/>
+                            <constraint firstItem="byn-l7-iDj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="ftJ-LY-iml"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="70x-eB-zik" secondAttribute="bottom" constant="19.329999999999998" id="m6E-g8-vIM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lizardImage" destination="HlL-lq-KAx" id="64g-kj-65B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-963.07692307692309" y="52.606635071090047"/>
+        </scene>
+        <!--Jumble View Controller-->
+        <scene sceneID="hqA-D8-mKw">
+            <objects>
+                <viewController id="QQ8-zu-UTi" customClass="JumbleViewController" customModule="WordGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LAX-A1-nzg">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYA-51-AVX">
+                                <rect key="frame" x="16" y="65" width="358" height="53.666666666666657"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Word Jumble">
+                                        <attributes>
+                                            <color key="NSColor" red="0.12903481721878052" green="0.32425516843795776" blue="0.40834364295005798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="48" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="hGi-ms-QIE">
+                                <rect key="frame" x="44" y="260" width="302" height="33.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQG-es-wue">
+                                        <rect key="frame" x="0.0" y="0.0" width="50.333333333333336" height="33.666666666666664"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="___">
+                                                <attributes>
+                                                    <font key="NSFont" size="30" name="ArialMT"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vz8-oi-77p">
+                                        <rect key="frame" x="50.333333333333329" y="0.0" width="50.333333333333329" height="33.666666666666664"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="___">
+                                                <attributes>
+                                                    <font key="NSFont" size="30" name="ArialMT"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kae-Ko-qyo">
+                                        <rect key="frame" x="100.66666666666666" y="0.0" width="50.333333333333343" height="33.666666666666664"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="___">
+                                                <attributes>
+                                                    <font key="NSFont" size="30" name="ArialMT"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTG-OZ-Sur">
+                                        <rect key="frame" x="151" y="0.0" width="50.333333333333343" height="33.666666666666664"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="___">
+                                                <attributes>
+                                                    <font key="NSFont" size="30" name="ArialMT"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bD-ad-Iyg">
+                                        <rect key="frame" x="201.33333333333334" y="0.0" width="50.333333333333343" height="33.666666666666664"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="___">
+                                                <attributes>
+                                                    <font key="NSFont" size="30" name="ArialMT"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LW-oJ-eyb">
+                                        <rect key="frame" x="251.66666666666671" y="0.0" width="50.333333333333343" height="33.666666666666664"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="___">
+                                                <attributes>
+                                                    <font key="NSFont" size="30" name="ArialMT"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hNr-NK-j0R">
+                                <rect key="frame" x="24.333333333333343" y="416" width="340" height="50"/>
+                                <subviews>
+                                    <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnV-Op-zLH">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.40520280599594116" green="0.53579968214035034" blue="0.60332363843917847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="35"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" red="0.12903481721878052" green="0.32425516843795776" blue="0.40834364295005798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="disabled" title="_">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="letterButtonPressed:" destination="QQ8-zu-UTi" eventType="touchUpInside" id="rCK-Bq-Juz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msC-gv-NJd">
+                                        <rect key="frame" x="58" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.40520280599594116" green="0.53579968214035034" blue="0.60332363843917847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="35"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" red="0.12903481721878052" green="0.32425516843795776" blue="0.40834364295005798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="disabled" title="_">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="letterButtonPressed:" destination="QQ8-zu-UTi" eventType="touchUpInside" id="nxz-jv-Al0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPg-DV-iA6">
+                                        <rect key="frame" x="116" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.40520280599594116" green="0.53579968214035034" blue="0.60332363843917847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="35"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" red="0.12903481721878052" green="0.32425516843795776" blue="0.40834364295005798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="disabled" title="_">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="letterButtonPressed:" destination="QQ8-zu-UTi" eventType="touchUpInside" id="G34-QH-5Io"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjk-8x-Xvy">
+                                        <rect key="frame" x="174" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.40520280599594116" green="0.53579968214035034" blue="0.60332363843917847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="35"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" red="0.12903481721878052" green="0.32425516843795776" blue="0.40834364295005798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="disabled" title="_">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="letterButtonPressed:" destination="QQ8-zu-UTi" eventType="touchUpInside" id="fDt-GY-em6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxk-Om-8PX">
+                                        <rect key="frame" x="232" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.40520280599594116" green="0.53579968214035034" blue="0.60332363843917847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="35"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" red="0.12903481721878052" green="0.32425516843795776" blue="0.40834364295005798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="disabled" title="_">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="letterButtonPressed:" destination="QQ8-zu-UTi" eventType="touchUpInside" id="bXa-i7-hwm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQJ-Z5-cAF">
+                                        <rect key="frame" x="290" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.40520280599594116" green="0.53579968214035034" blue="0.60332363843917847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="35"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" red="0.12903481721878052" green="0.32425516843795776" blue="0.40834364295005798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="disabled" title="_">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="letterButtonPressed:" destination="QQ8-zu-UTi" eventType="touchUpInside" id="zzK-DL-3BH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Ru0-dX-avL">
+                                <rect key="frame" x="23" y="541" width="344" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsq-R2-0gm">
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="Jumble">
+                                            <color key="titleColor" red="0.12903481721878052" green="0.32425516843795776" blue="0.40834364295005798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="jumbleButtonPressed:" destination="QQ8-zu-UTi" eventType="touchUpInside" id="G8R-AE-5XP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOK-Ub-jhb">
+                                        <rect key="frame" x="94" y="0.0" width="86" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="New Game">
+                                            <color key="titleColor" red="0.12903481721878052" green="0.32425516843795776" blue="0.40834364295005798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="newGameButtonPressed:" destination="QQ8-zu-UTi" eventType="touchUpInside" id="4yS-MD-viF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVo-pt-mGk">
+                                        <rect key="frame" x="219" y="0.0" width="45" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="Reset">
+                                            <color key="titleColor" red="0.12903481721878052" green="0.32425516843795776" blue="0.40834364295005798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetButtonPressed:" destination="QQ8-zu-UTi" eventType="touchUpInside" id="vX0-h7-A9K"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOd-f6-QeG">
+                                        <rect key="frame" x="303" y="0.0" width="41" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="Enter">
+                                            <color key="titleColor" red="0.12903481721878052" green="0.32425516843795776" blue="0.40834364295005798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enterButtonPressed:" destination="QQ8-zu-UTi" eventType="touchUpInside" id="Pry-w0-me2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVJ-tw-X9I">
+                                <rect key="frame" x="136" y="712" width="119" height="39"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                <state key="normal" title="End Game">
+                                    <color key="titleColor" red="0.12903481721878052" green="0.32425516843795776" blue="0.40834364295005798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="endGameButtonPressed:" destination="QQ8-zu-UTi" eventType="touchUpInside" id="fbY-jw-Hp4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gbQ-vZ-fHP"/>
+                        <color key="backgroundColor" red="0.60689163208007812" green="0.69603931903839111" blue="0.74248045682907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gbQ-vZ-fHP" firstAttribute="trailing" secondItem="qVJ-tw-X9I" secondAttribute="trailing" constant="135" id="327-D5-8ul"/>
+                            <constraint firstItem="hNr-NK-j0R" firstAttribute="top" secondItem="hGi-ms-QIE" secondAttribute="bottom" constant="122.33" id="9mO-tv-ehq"/>
+                            <constraint firstItem="Ru0-dX-avL" firstAttribute="top" secondItem="hNr-NK-j0R" secondAttribute="bottom" constant="75" id="CDu-XE-r8B"/>
+                            <constraint firstItem="RYA-51-AVX" firstAttribute="leading" secondItem="gbQ-vZ-fHP" secondAttribute="leading" constant="16" id="Ck3-4J-5b9"/>
+                            <constraint firstItem="RYA-51-AVX" firstAttribute="top" secondItem="gbQ-vZ-fHP" secondAttribute="top" constant="21" id="OQr-lK-rOg"/>
+                            <constraint firstItem="gbQ-vZ-fHP" firstAttribute="bottom" secondItem="qVJ-tw-X9I" secondAttribute="bottom" constant="59" id="QR0-OU-nTS"/>
+                            <constraint firstItem="gbQ-vZ-fHP" firstAttribute="trailing" secondItem="Ru0-dX-avL" secondAttribute="trailing" constant="23" id="Zwj-6o-07Q"/>
+                            <constraint firstItem="hGi-ms-QIE" firstAttribute="top" secondItem="RYA-51-AVX" secondAttribute="bottom" constant="141.33000000000001" id="aJ0-ud-R5I"/>
+                            <constraint firstItem="gbQ-vZ-fHP" firstAttribute="trailing" secondItem="RYA-51-AVX" secondAttribute="trailing" constant="16" id="d4k-WJ-e1b"/>
+                            <constraint firstItem="qVJ-tw-X9I" firstAttribute="leading" secondItem="gbQ-vZ-fHP" secondAttribute="leading" constant="136" id="dmu-G0-j2J"/>
+                            <constraint firstItem="hNr-NK-j0R" firstAttribute="leading" secondItem="gbQ-vZ-fHP" secondAttribute="leading" constant="24.210000000000001" id="eOr-TO-gbl"/>
+                            <constraint firstItem="qVJ-tw-X9I" firstAttribute="top" secondItem="Ru0-dX-avL" secondAttribute="bottom" constant="140" id="fBW-po-ZBx"/>
+                            <constraint firstItem="Ru0-dX-avL" firstAttribute="leading" secondItem="gbQ-vZ-fHP" secondAttribute="leading" constant="23" id="lGW-5G-8f2"/>
+                            <constraint firstItem="gbQ-vZ-fHP" firstAttribute="trailing" secondItem="hGi-ms-QIE" secondAttribute="trailing" constant="44" id="u87-7F-Odu"/>
+                            <constraint firstItem="gbQ-vZ-fHP" firstAttribute="trailing" secondItem="hNr-NK-j0R" secondAttribute="trailing" constant="25.789999999999999" id="yqE-qu-z0h"/>
+                            <constraint firstItem="hGi-ms-QIE" firstAttribute="leading" secondItem="gbQ-vZ-fHP" secondAttribute="leading" constant="44" id="yxf-Of-s14"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="enterButton" destination="HOd-f6-QeG" id="3Iv-NA-X70"/>
+                        <outlet property="jumbleButton" destination="Fsq-R2-0gm" id="t28-RT-eRB"/>
+                        <outlet property="resetButton" destination="AVo-pt-mGk" id="sxF-9t-9oI"/>
+                        <outletCollection property="solvingSquares" destination="cQG-es-wue" collectionClass="NSMutableArray" id="rhC-38-CbJ"/>
+                        <outletCollection property="solvingSquares" destination="Vz8-oi-77p" collectionClass="NSMutableArray" id="KcY-QI-wzX"/>
+                        <outletCollection property="solvingSquares" destination="kae-Ko-qyo" collectionClass="NSMutableArray" id="1pE-8Y-Rsr"/>
+                        <outletCollection property="solvingSquares" destination="PTG-OZ-Sur" collectionClass="NSMutableArray" id="Zq1-sU-RzZ"/>
+                        <outletCollection property="solvingSquares" destination="6bD-ad-Iyg" collectionClass="NSMutableArray" id="0hu-ZH-efc"/>
+                        <outletCollection property="solvingSquares" destination="9LW-oJ-eyb" collectionClass="NSMutableArray" id="Ff3-xf-Kba"/>
+                        <outletCollection property="letterButtons" destination="msC-gv-NJd" collectionClass="NSMutableArray" id="3nK-LS-hxZ"/>
+                        <outletCollection property="letterButtons" destination="qPg-DV-iA6" collectionClass="NSMutableArray" id="KEf-CH-j4B"/>
+                        <outletCollection property="letterButtons" destination="tjk-8x-Xvy" collectionClass="NSMutableArray" id="Vgf-I3-i4q"/>
+                        <outletCollection property="letterButtons" destination="Nxk-Om-8PX" collectionClass="NSMutableArray" id="69B-dx-LZ0"/>
+                        <outletCollection property="letterButtons" destination="BQJ-Z5-cAF" collectionClass="NSMutableArray" id="YDA-mg-yfg"/>
+                        <outletCollection property="letterButtons" destination="PnV-Op-zLH" collectionClass="NSMutableArray" id="yRh-zS-B1r"/>
+                        <segue destination="h8l-Tb-Eaj" kind="unwind" identifier="jumbleEndSegue" unwindAction="unwindToHomeScreen:" id="VNI-aw-ojK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hNg-Go-1YT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="h8l-Tb-Eaj" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-146.15384615384616" y="-570.14218009478668"/>
+        </scene>
+        <!--Word Search View Controller-->
+        <scene sceneID="Bdp-xg-mfB">
+            <objects>
+                <viewController id="D1e-TJ-Ffc" customClass="WordSearchViewController" customModule="WordGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BEa-7N-Cti">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hf6-g5-OG5">
+                                <rect key="frame" x="131" y="691" width="128" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                <state key="normal" title="End Game">
+                                    <color key="titleColor" red="0.47058823529999999" green="0.0039215686269999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ftb-b5-dN8" kind="unwind" unwindAction="unwindToHomeScreen:" id="gbQ-eJ-yZu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIN-vh-xvN">
+                                <rect key="frame" x="36" y="56" width="318" height="107.33333333333331"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="WORD SEARCH">
+                                        <attributes>
+                                            <color key="NSColor" red="0.47058823529999999" green="0.0039215686269999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="48" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jPq-hH-rLf">
+                                <rect key="frame" x="95" y="206" width="60" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28l-fr-VtR">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="_">
+                                            <color key="titleColor" red="0.47058823529999999" green="0.0039215686269999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ht-fg-3Lp">
+                                        <rect key="frame" x="30" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="_">
+                                            <color key="titleColor" red="0.47058823529999999" green="0.0039215686269999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEQ-1d-kh1">
+                                <rect key="frame" x="241" y="553" width="30" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <state key="normal" title="_">
+                                    <color key="titleColor" red="0.47058823529999999" green="0.0039215686269999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYx-Vf-K37">
+                                <rect key="frame" x="251" y="563" width="30" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <state key="normal" title="_">
+                                    <color key="titleColor" red="0.47058823529999999" green="0.0039215686269999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jsC-Ng-mEg"/>
+                        <color key="backgroundColor" red="0.38823529410000002" green="0.2784313725" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1it-Zq-UWM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Ftb-b5-dN8" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-146.15384615384616" y="762.79620853080564"/>
+        </scene>
+        <!--Hangman View Controller-->
+        <scene sceneID="hil-fh-0P1">
+            <objects>
+                <viewController id="MDR-if-Tfd" customClass="HangmanViewController" customModule="WordGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MBJ-JO-1Ii">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHL-fH-MyH">
+                                <rect key="frame" x="45" y="562" width="300" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAJ-GS-c4P">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="Q">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="9pW-gR-rA3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdd-CJ-kZI">
+                                        <rect key="frame" x="30" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="W">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="cIA-fa-vZJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAx-RE-UYb">
+                                        <rect key="frame" x="60" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="E">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="el3-en-4jD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIw-8S-hEV">
+                                        <rect key="frame" x="90" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="R">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="opB-d4-LO3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B06-YK-DHw">
+                                        <rect key="frame" x="120" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="T">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="Ja0-ny-fFj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zw-i7-5Xo">
+                                        <rect key="frame" x="150" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="Y">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="3Fl-1K-gs5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83A-Pc-svT">
+                                        <rect key="frame" x="180" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="U">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="3Pt-bY-Uu3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBZ-IL-ssg">
+                                        <rect key="frame" x="210" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="I">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="thK-Wg-qjN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWo-bS-7Sp">
+                                        <rect key="frame" x="240" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="O">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="S5Y-xK-5Pg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uC-Wr-7mH">
+                                        <rect key="frame" x="270" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="P">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="y9t-ml-MXF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hSG-QO-4i4">
+                                <rect key="frame" x="60" y="601" width="270" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1L-Oq-H06">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="A">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="OrB-Hz-0dx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ah-MO-wLc">
+                                        <rect key="frame" x="30" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="S">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="lyn-14-z3G"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6H-Tk-cQk">
+                                        <rect key="frame" x="60" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="D">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="bNt-dO-P6F"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K53-vO-8Yt">
+                                        <rect key="frame" x="90" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="F">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="581-Hh-lTw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7C4-Qw-YGy">
+                                        <rect key="frame" x="120" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="G">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="uzw-nv-pxm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="598-aO-p7a">
+                                        <rect key="frame" x="150" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="H">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="hXh-jf-Juh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zn-CQ-fJ1">
+                                        <rect key="frame" x="180" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="J">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="pE1-Xn-Skh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6y0-RF-lok">
+                                        <rect key="frame" x="210" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="K">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="8mj-iO-omu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6R4-Rn-3Px">
+                                        <rect key="frame" x="240" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="L">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="VKD-Zv-QOy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OlA-ic-21Z">
+                                <rect key="frame" x="90" y="640" width="210" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLI-ef-QaP">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="Z">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="mna-zZ-rGh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAO-ML-iog">
+                                        <rect key="frame" x="30" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="Aeh-0P-Hp1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70q-1N-C1v">
+                                        <rect key="frame" x="60" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="C">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="0EW-CY-XZi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8e-dL-uMw">
+                                        <rect key="frame" x="90" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="V">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="ISd-kp-VRX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKG-fV-1ya">
+                                        <rect key="frame" x="120" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="B">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="w07-SV-p1z"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHS-19-Z8l">
+                                        <rect key="frame" x="150" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="N">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="GmI-ex-zBY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkm-Ii-aFP">
+                                        <rect key="frame" x="180" y="0.0" width="30" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                        <state key="normal" title="M">
+                                            <color key="titleColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="keyboardButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="bOh-Fq-god"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8Y-eY-QQm">
+                                <rect key="frame" x="45" y="494" width="109" height="31"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <state key="normal" title="Show Solution">
+                                    <color key="titleColor" red="0.30196078430000001" green="0.56470588239999997" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="solutionButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="lXa-gr-M08"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIA-7v-vsc">
+                                <rect key="frame" x="242" y="494" width="103" height="31"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <state key="normal" title="Guess Letter!">
+                                    <color key="titleColor" red="0.30196078430000001" green="0.56470588239999997" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="guessButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="4el-ja-l5z"/>
+                                </connections>
+                            </button>
+                            <label userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grV-13-1ac">
+                                <rect key="frame" x="171.66666666666666" y="486" width="47" height="47"/>
+                                <color key="backgroundColor" red="0.37254901959999998" green="0.67843137249999996" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="CSW-NY-p3y"/>
+                                    <constraint firstAttribute="width" secondItem="grV-13-1ac" secondAttribute="height" multiplier="1:1" id="z8H-xc-tuW"/>
+                                    <constraint firstAttribute="width" constant="47" id="zVo-e2-n5h"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="?">
+                                        <attributes>
+                                            <color key="NSColor" red="0.70588235290000001" green="0.26274509800000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="36" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJg-ff-9Zg">
+                                <rect key="frame" x="45" y="431" width="300" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="6je-CX-jcZ"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="______">
+                                        <attributes>
+                                            <color key="NSColor" red="0.30196078430000001" green="0.56470588239999997" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="24" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNs-bK-OTZ">
+                                <rect key="frame" x="45" y="717" width="123" height="39"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" red="0.30196078430000001" green="0.56470588239999997" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="newGameButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="MsC-gV-YwY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2px-yW-rfQ">
+                                <rect key="frame" x="226" y="717" width="119" height="39"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                <state key="normal" title="End Game">
+                                    <color key="titleColor" red="0.30196078430000001" green="0.56470588239999997" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="endGameButtonPressed:" destination="MDR-if-Tfd" eventType="touchUpInside" id="N18-qW-6WN"/>
+                                </connections>
+                            </button>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="beT-Ui-ukD" customClass="HangmanView" customModule="WordGames" customModuleProvider="target">
+                                <rect key="frame" x="45" y="123" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="8Nv-HD-TYP"/>
+                                    <constraint firstAttribute="height" constant="300" id="nHZ-vF-xhW"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osZ-8n-qp8">
+                                <rect key="frame" x="86" y="61" width="219" height="53.666666666666657"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Hangman">
+                                        <attributes>
+                                            <color key="NSColor" red="0.30196078430000001" green="0.56470588239999997" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="48" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jbw-34-Fqs"/>
+                        <color key="backgroundColor" red="0.70588235290000001" green="0.26274509800000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="grV-13-1ac" firstAttribute="centerY" secondItem="W8Y-eY-QQm" secondAttribute="centerY" id="077-kj-FUb"/>
+                            <constraint firstItem="grV-13-1ac" firstAttribute="centerX" secondItem="bHL-fH-MyH" secondAttribute="centerX" id="5bc-MW-gKE"/>
+                            <constraint firstItem="eNs-bK-OTZ" firstAttribute="top" secondItem="OlA-ic-21Z" secondAttribute="bottom" constant="46" id="9Zq-dj-ffe"/>
+                            <constraint firstItem="LIA-7v-vsc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="grV-13-1ac" secondAttribute="trailing" id="Gmw-xv-tBy"/>
+                            <constraint firstItem="grV-13-1ac" firstAttribute="top" secondItem="bJg-ff-9Zg" secondAttribute="bottom" constant="28" id="H9l-79-kXB"/>
+                            <constraint firstItem="LIA-7v-vsc" firstAttribute="centerY" secondItem="W8Y-eY-QQm" secondAttribute="centerY" id="JF2-p4-rly"/>
+                            <constraint firstItem="bHL-fH-MyH" firstAttribute="trailing" secondItem="beT-Ui-ukD" secondAttribute="trailing" id="Jge-mI-9Bo"/>
+                            <constraint firstItem="bHL-fH-MyH" firstAttribute="leading" secondItem="beT-Ui-ukD" secondAttribute="leading" id="MeH-de-0Y3"/>
+                            <constraint firstItem="OlA-ic-21Z" firstAttribute="top" secondItem="hSG-QO-4i4" secondAttribute="bottom" constant="8" symbolic="YES" id="NQ7-Br-qHA"/>
+                            <constraint firstItem="hSG-QO-4i4" firstAttribute="top" secondItem="bHL-fH-MyH" secondAttribute="bottom" constant="8" symbolic="YES" id="Na9-hD-c5q"/>
+                            <constraint firstItem="Jbw-34-Fqs" firstAttribute="trailing" secondItem="beT-Ui-ukD" secondAttribute="trailing" constant="45" id="NkG-5q-jgL"/>
+                            <constraint firstItem="hSG-QO-4i4" firstAttribute="leading" secondItem="Jbw-34-Fqs" secondAttribute="leading" constant="60" id="OBk-zS-Waw"/>
+                            <constraint firstAttribute="bottom" secondItem="grV-13-1ac" secondAttribute="bottom" constant="311" id="Oe9-v0-rPC"/>
+                            <constraint firstItem="W8Y-eY-QQm" firstAttribute="leading" secondItem="beT-Ui-ukD" secondAttribute="leading" id="QNi-4P-pOl"/>
+                            <constraint firstItem="grV-13-1ac" firstAttribute="centerX" secondItem="bJg-ff-9Zg" secondAttribute="centerX" id="Rwm-jE-xHf"/>
+                            <constraint firstItem="osZ-8n-qp8" firstAttribute="top" secondItem="Jbw-34-Fqs" secondAttribute="top" constant="17" id="Rz8-8B-EOp"/>
+                            <constraint firstItem="beT-Ui-ukD" firstAttribute="top" secondItem="osZ-8n-qp8" secondAttribute="bottom" constant="8.3300000000000001" id="Vm8-u3-Mxo"/>
+                            <constraint firstItem="beT-Ui-ukD" firstAttribute="leading" secondItem="Jbw-34-Fqs" secondAttribute="leading" constant="45" id="Y8U-mL-Ryy"/>
+                            <constraint firstItem="bJg-ff-9Zg" firstAttribute="top" secondItem="beT-Ui-ukD" secondAttribute="bottom" constant="8" symbolic="YES" id="YjD-zK-13q"/>
+                            <constraint firstItem="Jbw-34-Fqs" firstAttribute="trailing" secondItem="osZ-8n-qp8" secondAttribute="trailing" constant="85" id="bMb-aY-Ldm"/>
+                            <constraint firstItem="grV-13-1ac" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="W8Y-eY-QQm" secondAttribute="trailing" id="c8f-gZ-iwI"/>
+                            <constraint firstItem="bHL-fH-MyH" firstAttribute="top" secondItem="grV-13-1ac" secondAttribute="bottom" constant="29" id="cMN-dv-a9U"/>
+                            <constraint firstItem="Jbw-34-Fqs" firstAttribute="trailing" secondItem="hSG-QO-4i4" secondAttribute="trailing" constant="60" id="e4v-Ca-uLx"/>
+                            <constraint firstItem="grV-13-1ac" firstAttribute="top" secondItem="bJg-ff-9Zg" secondAttribute="bottom" constant="28" id="hST-QL-jZF"/>
+                            <constraint firstItem="2px-yW-rfQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eNs-bK-OTZ" secondAttribute="trailing" constant="8" symbolic="YES" id="hpf-YH-mgX"/>
+                            <constraint firstItem="eNs-bK-OTZ" firstAttribute="leading" secondItem="beT-Ui-ukD" secondAttribute="leading" id="jZn-lR-tpC"/>
+                            <constraint firstItem="LIA-7v-vsc" firstAttribute="trailing" secondItem="beT-Ui-ukD" secondAttribute="trailing" id="kbg-dq-cWB"/>
+                            <constraint firstItem="2px-yW-rfQ" firstAttribute="trailing" secondItem="beT-Ui-ukD" secondAttribute="trailing" id="pI6-Fj-HLM"/>
+                            <constraint firstItem="Jbw-34-Fqs" firstAttribute="trailing" secondItem="OlA-ic-21Z" secondAttribute="trailing" constant="90" id="qzM-bW-q8X"/>
+                            <constraint firstItem="bJg-ff-9Zg" firstAttribute="leading" secondItem="Jbw-34-Fqs" secondAttribute="leading" constant="45" id="rdI-Wd-543"/>
+                            <constraint firstItem="2px-yW-rfQ" firstAttribute="centerY" secondItem="eNs-bK-OTZ" secondAttribute="centerY" id="tXX-ex-DWY"/>
+                            <constraint firstItem="OlA-ic-21Z" firstAttribute="leading" secondItem="Jbw-34-Fqs" secondAttribute="leading" constant="90" id="u8h-wn-nsF"/>
+                            <constraint firstItem="osZ-8n-qp8" firstAttribute="leading" secondItem="Jbw-34-Fqs" secondAttribute="leading" constant="86" id="xqz-Lz-rnj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="bJg-ff-9Zg" id="ADD-xj-Klr"/>
+                        <outlet property="guessButton" destination="LIA-7v-vsc" id="CvK-jT-jz1"/>
+                        <outlet property="hangmanCanvas" destination="beT-Ui-ukD" id="QEX-rR-al8"/>
+                        <outlet property="possibleLetterGuess" destination="grV-13-1ac" id="Wm7-fb-rNy"/>
+                        <outlet property="solutionButton" destination="W8Y-eY-QQm" id="bu9-Iy-zlI"/>
+                        <outletCollection property="keyboardLetters" destination="IAJ-GS-c4P" collectionClass="NSMutableArray" id="bmb-af-lbf"/>
+                        <outletCollection property="keyboardLetters" destination="Cdd-CJ-kZI" collectionClass="NSMutableArray" id="Hbe-cS-RyV"/>
+                        <outletCollection property="keyboardLetters" destination="UAx-RE-UYb" collectionClass="NSMutableArray" id="53U-9K-UAt"/>
+                        <outletCollection property="keyboardLetters" destination="UIw-8S-hEV" collectionClass="NSMutableArray" id="kUx-Fd-bQr"/>
+                        <outletCollection property="keyboardLetters" destination="B06-YK-DHw" collectionClass="NSMutableArray" id="0hB-bo-FD9"/>
+                        <outletCollection property="keyboardLetters" destination="3Zw-i7-5Xo" collectionClass="NSMutableArray" id="GOl-BA-fgq"/>
+                        <outletCollection property="keyboardLetters" destination="83A-Pc-svT" collectionClass="NSMutableArray" id="2td-jZ-d1k"/>
+                        <outletCollection property="keyboardLetters" destination="aBZ-IL-ssg" collectionClass="NSMutableArray" id="NeE-yw-Ft1"/>
+                        <outletCollection property="keyboardLetters" destination="fWo-bS-7Sp" collectionClass="NSMutableArray" id="n5R-vo-V1b"/>
+                        <outletCollection property="keyboardLetters" destination="5uC-Wr-7mH" collectionClass="NSMutableArray" id="0gK-3f-Yd1"/>
+                        <outletCollection property="keyboardLetters" destination="m1L-Oq-H06" collectionClass="NSMutableArray" id="tfw-G1-hVR"/>
+                        <outletCollection property="keyboardLetters" destination="6ah-MO-wLc" collectionClass="NSMutableArray" id="87h-hc-rw5"/>
+                        <outletCollection property="keyboardLetters" destination="K6H-Tk-cQk" collectionClass="NSMutableArray" id="eWf-Us-UIp"/>
+                        <outletCollection property="keyboardLetters" destination="K53-vO-8Yt" collectionClass="NSMutableArray" id="R4h-v9-Fds"/>
+                        <outletCollection property="keyboardLetters" destination="7C4-Qw-YGy" collectionClass="NSMutableArray" id="Cba-0h-e17"/>
+                        <outletCollection property="keyboardLetters" destination="598-aO-p7a" collectionClass="NSMutableArray" id="288-qP-dxw"/>
+                        <outletCollection property="keyboardLetters" destination="4zn-CQ-fJ1" collectionClass="NSMutableArray" id="DVH-hb-JXY"/>
+                        <outletCollection property="keyboardLetters" destination="6y0-RF-lok" collectionClass="NSMutableArray" id="FWY-Bi-d0A"/>
+                        <outletCollection property="keyboardLetters" destination="6R4-Rn-3Px" collectionClass="NSMutableArray" id="5ja-R3-2Qs"/>
+                        <outletCollection property="keyboardLetters" destination="YLI-ef-QaP" collectionClass="NSMutableArray" id="ncC-gI-lAg"/>
+                        <outletCollection property="keyboardLetters" destination="fAO-ML-iog" collectionClass="NSMutableArray" id="oGd-eV-1dB"/>
+                        <outletCollection property="keyboardLetters" destination="70q-1N-C1v" collectionClass="NSMutableArray" id="8zk-Bx-5bJ"/>
+                        <outletCollection property="keyboardLetters" destination="d8e-dL-uMw" collectionClass="NSMutableArray" id="HQX-Zh-eLG"/>
+                        <outletCollection property="keyboardLetters" destination="JKG-fV-1ya" collectionClass="NSMutableArray" id="aDX-rG-zYu"/>
+                        <outletCollection property="keyboardLetters" destination="MHS-19-Z8l" collectionClass="NSMutableArray" id="VxT-8j-Ls0"/>
+                        <outletCollection property="keyboardLetters" destination="xkm-Ii-aFP" collectionClass="NSMutableArray" id="4wi-9f-auF"/>
+                        <segue destination="UfS-4R-Rqt" kind="unwind" identifier="hangmanEndSegue" unwindAction="unwindToHomeScreen:" id="r5L-Xk-TNS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rip-hU-TVF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="UfS-4R-Rqt" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-146.15384615384616" y="69.66824644549763"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lizard" width="750" height="750"/>
+    </resources>
+</document>
